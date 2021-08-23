@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class UC2{
+public class UC3{
   public static void main(String args[])
   {
 	  
@@ -15,6 +15,7 @@ public class UC2{
   y11=reader.nextInt();
   x12=reader.nextInt();
   y12=reader.nextInt();
+  
   distance1=Math.sqrt((x12-x11)*(x12-x11)+(y12-y11)*(y12-y11));
   
   System.out.println("Enter the coordinates of line 2");
@@ -22,11 +23,22 @@ public class UC2{
   y21=reader.nextInt();
   x22=reader.nextInt();
   y22=reader.nextInt();
+  
   distance2=Math.sqrt((x22-x21)*(x22-x21)+(y22-y21)*(y22-y21));
   
-  if(distance1==distance2)
+  
+  if((String.valueOf(distance1)).compareTo(String.valueOf(distance2))==0)
 		{
 			System.out.println("Two lines are equal");
 		}
+  else if((String.valueOf(distance1)).compareTo(String.valueOf(distance2))>0) {
+       System.out.println("Line1 is greater than Line2");
+    }
+	else{
+			System.out.println("Line1 is lesser than Line2");
+	}
+
+  System.out.println("The length of the line1 is:"+String.format("%.4f",distance1));
+  System.out.println("The length of the line2 is:"+String.format("%.4f",distance2));
   }
 }
