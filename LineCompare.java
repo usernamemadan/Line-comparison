@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class UC1{
+public class UC2{
   public static void main(String args[])
   {
 	  
@@ -24,5 +24,9 @@ public class UC1{
   y22=reader.nextInt();
   distance2=Math.sqrt((x22-x21)*(x22-x21)+(y22-y21)*(y22-y21));
   
+  if(distance1==distance2)
+		{
+			System.out.println("Two lines are equal");
+		}
   }
 }
